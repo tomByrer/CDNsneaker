@@ -43,7 +43,7 @@ $.fn.addScript = function(str, myLib) {
 	});
 };
 var $prepHTML = $('#prep-html'),
-	$addjQuery = $('<button id="add-jquery">jQuery</button>').addScript('jquery/1/jquery.min'),
+		$addjQuery = $('<button id="add-jquery">jQuery</button>').addScript('jquery/1/jquery.min');
 
 $('<div id="add-buttons" />').append($addjQuery).insertBefore('#add-libraries');
 /* end jsPerf lift */
