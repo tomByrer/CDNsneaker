@@ -47,10 +47,15 @@ var $prepHTML = $('#prep-html'),
 		$addjQuery2 = $('<button id="add-jquery2">jQuery v2</button>').addScript('jquery/2/jquery.min'),
 		$lodash = $('<button id="add-lodash">Lo-Dash</button>').addScript('lodash/latest/lodash.min'),
 		$lodashU = $('<button id="add-lodashU">Lo-Dash_Underscore</button>').addScript('lodash/latest/lodash.underscore.min'),
-		$underscore = $('<button id="add-underscore">Underscore</button>').addScript('underscorejs/latest/underscore-min');
+		$underscore = $('<button id="add-underscore">Underscore</button>').addScript('underscorejs/latest/underscore-min'),
+		$addjQueryL1 = $('<button id="add-jqueryL1">jQuery v1</button>').addScript('jquery/1/jquery.min'),
+		$addjQueryL2 = $('<button id="add-jqueryL2">jQuery v2</button>').addScript('jquery/2/jquery.min'),
+		$lodashL = $('<button id="add-lodashL">Lo-Dash</button>').addScript('lodash/latest/lodash.min'),
+		$lodashUL = $('<button id="add-lodashUL">Lo-Dash_Underscore</button>').addScript('lodash/latest/lodash.underscore.min'),
+		$underscoreL = $('<button id="add-underscoreL">Underscore</button>').addScript('underscorejs/latest/underscore-min');
 
 
-$('<div id="add-buttons" />').append($addjQuery1).append($addjQuery2).append($lodash).append($lodashU).append($underscore).insertBefore('#add-libraries');
+$('<div id="add-buttons" /><div>').append($addjQuery1).append($addjQuery2).append($lodash).append($lodashU).append($underscore).append('</div><div>').insertBefore('#add-libraries');
 /* end jsPerf lift */
 
 
