@@ -36,17 +36,18 @@ $.fn.insertAtCaret = function(myValue) {
 $.fn.addScript = function(str, myLib) {
 	return this.click(function(event) {
 		if (!~$prepHTML.val().indexOf(str)) {
-			$prepHTML.insertAtCaret('<script src="//' + 'cdn.jsdelivr.net/' + str + '.js">\x3C/script>\n');
+				$prepHTML.insertAtCaret('<script src="//' + 'ajax.googleapis.com/ajax/libs/' + str + '.js">\x3C/script>\n');
 		}
 		$prepHTML.focus();
 		event.preventDefault();
 	});
 };
 var $prepHTML = $('#prep-html'),
-		$addjQuery1 = $('<button id="add-jquery1">jQuery v1</button>').addScript('jquery/1/jquery.min');
-		$addjQuery2 = $('<button id="add-jquery2">jQuery v2</button>').addScript('jquery/2/jquery.min');
-		$lodash = $('<button id="add-lodash">Lo-Dash</button>').addScript('lodash/latest/lodash.min');
-		$lodashU = $('<button id="add-lodashU">Lo-Dash_Underscore</button>').addScript('lodash/latest/lodash.underscore.min');
+    $addjQuery = $('<button id="add-jquery">jQuery</button>').addScript('jquery/1/jquery.min'),
+		$addjQuery1 = $('<button id="add-jquery1">jQuery v1</button>').addScript('jquery/1/jquery.min'),
+		$addjQuery2 = $('<button id="add-jquery2">jQuery v2</button>').addScript('jquery/2/jquery.min'),
+		$lodash = $('<button id="add-lodash">Lo-Dash</button>').addScript('lodash/latest/lodash.min'),
+		$lodashU = $('<button id="add-lodashU">Lo-Dash_Underscore</button>').addScript('lodash/latest/lodash.underscore.min'),
 		$underscore = $('<button id="add-underscore">underscore</button>').addScript('underscorejs/latest/underscore-min');
 
 
