@@ -12,4 +12,4 @@ Sneak CDN-inserting buttons into [jsPerf](http://jsperf.com/)'s "Preparation cod
 
 ## Licence
 
-[Mozilla Public License 2.0](http://www.mozilla.org/MPL/2.0/)
+MIT
