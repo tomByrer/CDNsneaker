@@ -7,7 +7,7 @@ var div = doc.getElementById("add-buttons");
 div.parentNode.removeChild(div);
 
 //load buttons
-/* from jsPerf is copyright © Mathias Bynens and dual-licensed under the MIT & GPL */
+/* from jsPerf is copyright © Mathias Bynens and dual-licensed under the MIT & GPL, edits by tomByrer */
 // http://gist.github.com/326491
 $.fn.insertAtCaret = function(myValue) {
 	return this.each(function() {
@@ -36,16 +36,21 @@ $.fn.insertAtCaret = function(myValue) {
 $.fn.addScript = function(str, myLib) {
 	return this.click(function(event) {
 		if (!~$prepHTML.val().indexOf(str)) {
-			$prepHTML.insertAtCaret('<script src="//' + 'ajax.googleapis.com/ajax/libs/' + str + '.js">\x3C/script>\n');
+			$prepHTML.insertAtCaret('<script src="//' + 'cdn.jsdelivr.net/' + str + '.js">\x3C/script>\n');
 		}
 		$prepHTML.focus();
 		event.preventDefault();
 	});
 };
 var $prepHTML = $('#prep-html'),
-		$addjQuery = $('<button id="add-jquery">jQuery</button>').addScript('jquery/1/jquery.min');
+		$addjQuery1 = $('<button id="add-jquery1">jQuery v1</button>').addScript('jquery/1/jquery.min');
+		$addjQuery2 = $('<button id="add-jquery2">jQuery v2</button>').addScript('jquery/2/jquery.min');
+		$lodash2 = $('<button id="add-lodash2">Lo-Dash</button>').addScript('lodash/latest/lodash.min');
+		$lodashU = $('<button id="add-lodashU">Lo-Dash_Underscore</button>').addScript('lodash/latest/lodash.underscore.min');
+		$underscore = $('<button id="add-underscore">underscore</button>').addScript('underscorejs/1/underscore-min');
 
-$('<div id="add-buttons" />').append($addjQuery).insertBefore('#add-libraries');
+
+$('<div id="add-buttons" />').append($addjQuery1).insertBefore('#add-libraries');
 /* end jsPerf lift */
 
 
