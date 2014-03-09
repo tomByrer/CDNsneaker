@@ -55,7 +55,7 @@ var $prepHTML = $('#prep-html'),
 		$underscoreL = $('<button id="add-underscoreL">Underscore</button>').addScript('underscorejs/latest/underscore-min');
 
 
-$('<div id="add-buttons" /><div>').append($addjQuery1).append($addjQuery2).append($lodash).append($lodashU).append($underscore).append('</div><div>').insertBefore('#add-libraries');
+$('<div id="add-buttons" />').append($addjQuery1).append($addjQuery2).append($lodash).append($lodashU).append($underscore).append('</div><div>').append($addjQueryL1).append($addjQueryL2).append($lodashL).append($lodashUL).append($underscoreL).insertBefore('#add-libraries');
 /* end jsPerf lift */
 
 
