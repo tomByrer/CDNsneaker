@@ -1,4 +1,4 @@
-//VJS-ES5
+// CDNsneaker/jsPerf v0.1.0 | (c)2014 tomByrer released MIT | target VanillaJS-ES5
 (function () {
 	var e = document.createElement('SCRIPT');
 	e.type = 'text/javascript';
