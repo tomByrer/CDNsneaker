@@ -1,4 +1,4 @@
-/*! CDNsneaker/jsPerf | (c)2014 tomByrer released MIT */
+/*! CDNsneaker/jsPerf v0.1.0 | (c)2014 tomByrer released MIT */
 // readies http://jsperf.com/ for intro.js
 ;(function(){
 //Nuke old buttons
@@ -8,6 +8,7 @@ div.parentNode.removeChild(div);
 
 //load buttons
 /* from jsPerf is copyright © Mathias Bynens and dual-licensed under the MIT & GPL, edits by tomByrer */
+// targeting old browsers, jQuery 1.5.2
 // http://gist.github.com/326491
 $.fn.insertAtCaret = function(myValue) {
 	return this.each(function() {
@@ -47,16 +48,9 @@ var $prepHTML = $('#prep-html'),
 		$addjQuery2 = $('<button id="add-jquery2">jQuery v2</button>').addScript('jquery/2/jquery.min'),
 		$lodash = $('<button id="add-lodash">Lo-Dash</button>').addScript('lodash/latest/lodash.min'),
 		$lodashU = $('<button id="add-lodashU">Lo-Dash_Underscore</button>').addScript('lodash/latest/lodash.underscore.min'),
-		$underscore = $('<button id="add-underscore">Underscore</button>').addScript('underscorejs/latest/underscore-min'),
-		$addjQueryL1 = $('<button id="add-jqueryL1">jQuery v1</button>').addScript('jquery/1/jquery.min'),
-		$addjQueryL2 = $('<button id="add-jqueryL2">jQuery v2</button>').addScript('jquery/2/jquery.min'),
-		$lodashL = $('<button id="add-lodashL">Lo-Dash</button>').addScript('lodash/latest/lodash.min'),
-		$lodashUL = $('<button id="add-lodashUL">Lo-Dash_Underscore</button>').addScript('lodash/latest/lodash.underscore.min'),
-		$underscoreL = $('<button id="add-underscoreL">Underscore</button>').addScript('underscorejs/latest/underscore-min');
+		$underscore = $('<button id="add-underscore">Underscore</button>').addScript('underscorejs/latest/underscore-min');
 
-
-$('<div id="add-buttons" />').append($addjQuery1).append($addjQuery2).append($lodash).append($lodashU).append($underscore).append('</div><div>').append($addjQueryL1).append($addjQueryL2).append($lodashL).append($lodashUL).append($underscoreL).insertBefore('#add-libraries');
+$('<div id="add-buttons" />').append($addjQuery1).append($addjQuery2).append($lodash).append($lodashU).append($underscore).insertBefore('#add-libraries');
 /* end jsPerf lift */
-
 
 })();
